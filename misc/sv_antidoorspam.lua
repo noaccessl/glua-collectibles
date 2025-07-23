@@ -1,3 +1,14 @@
+
+--[[
+
+	Note:
+		The script is a bit old and can be fine-tuned.
+		At the moment, this is for your insight of the concept;
+		and not meaning you can't use it.
+
+]]
+
+
 --[[–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 	Prepare
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––]]

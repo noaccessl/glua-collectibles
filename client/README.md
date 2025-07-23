@@ -1,11 +1,10 @@
-# http.lua
 
----
+### [http.lua](./http.lua)
 
-### http.DownloadImage
-Downloads image from web server into `DATA/webassets` folder
+#### `http.DownloadImage`
+Downloads an image from a web server into `DATA/webassets` folder
 
-###### Example: Using only callback
+###### Example</br>Through callback
 ```lua
 http.DownloadImage( 'https://files.facepunch.com/garry/822e60dc-c931-43e4-800f-cbe010b3d4cc.png', function( pMaterial )
 
@@ -21,9 +20,8 @@ http.DownloadImage( 'https://files.facepunch.com/garry/822e60dc-c931-43e4-800f-c
 
 end )
 ```
-<br>
 
-###### Example: Using variable
+###### Example</br>Through upvalue
 ```lua
 local matIcon = Material( '__error' )
 
