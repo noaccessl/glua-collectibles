@@ -211,7 +211,7 @@ local FuncBudget_Standard_Last = 0
 					The number of iterations of a budgeted-function within a frame.
 
 				number digit
-					The shown amount of digits after the decimal point of time-spent-numbers.
+					The amount of shown digits after the decimal point of time-spent-numbers.
 
 					Default: 5
 
@@ -538,7 +538,7 @@ end
 					The name of this case.
 
 				boolean standard
-					Should the result of this budgeted-function be used as comparison-standard across-the-board?
+					Should the result of this budgeted-function be used as the current comparison-standard across-the-board?
 					Optional though recommended.
 
 				function setup
