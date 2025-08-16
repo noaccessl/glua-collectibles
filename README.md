@@ -1,29 +1,79 @@
 # glua-collectibles
- Various GLua scripts/extensions of potential beneficial use.
+Various GLua scripts/extensions of potential beneficial use.
 
 ---
 
-### [net_tablethroughstring.lua](./net_tablethroughstring.lua)
- See the heading within the file.
+#### [dev_gluafuncbudget](./dev_gluafuncbudget.lua)
+A utility that serves to conveniently measure performance of functions.</br>
+<sub>Brief documentation can be found within the file.</sub>
 
-### [utf8_lowerupper.lua](./utf8_lowerupper.lua)
- `string.lower` & `string.upper` with UTF-8 support
+<details><summary>Demo</summary>
+
+![GLuaFuncBudget Demo](dev_gluafuncbudget.png)
+```lua
+gluafuncbudget.Configure( {
+
+	frames = 60--[["fps"]] * 10000--[["cycles/samples"]];
+	iterations_per_frame = 1e3;
+
+	digit = 5;
+
+	measure_unit = 'us';
+	comparison_basis = 'average';
+
+	shown_categories = 'total median min max average avgfps minfps maxfps stddevfps';
+
+} )
+
+gluafuncbudget.Queue( {
+
+	name = 'x ^ 2';
+	standard = true;
+
+	__x = ( 1 + math.sqrt( 5 ) ) / 2
+	setup = function( this ) return this.__x end;
+
+	main = function( x ) return x ^ 2 end;
+	--[[boolean]] jit_off; -- (for reference)
+
+	--[[function]] after -- (for reference)
+
+} )
+
+gluafuncbudget.Queue( {
+
+	name = 'x * x';
+
+	__x = ( 1 + math.sqrt( 5 ) ) / 2
+	setup = function( this ) return this.__x end;
+
+	main = function( x ) return x * x end
+
+} )
+```
+</details>
+
+#### [net_tablethroughstring](./net_tablethroughstring.lua)
+See the heading within the file.
+
+#### [utf8_lowerupper](./utf8_lowerupper.lua)
+`string.lower` & `string.upper` with UTF-8 support
 ```lua
 print( utf8.lower( 'АБВ' ) ) -- абв
 print( utf8.upper( 'абв' ) ) -- АБВ
 ```
 
-### [util_switch.lua](./util_switch.lua)
- Switch statement akin to C/C++. JIT-compatible.
+#### [util_switch](./util_switch.lua)
+Switch statement akin to C/C++. JIT-compatible.
 
-### [client/http.lua](./client/http.lua)
- [client/README.md](./client/README.md)
+#### [client/http](./client/http.lua)
+[client/README.md](./client/README.md)
 
-### [misc/sv_antidoorspam.lua](./misc/sv_antidoorspam.lua)
- Self-explanatory.
+#### [misc/sv_antidoorspam](./misc/sv_antidoorspam.lua)
+Self-explanatory.
 
-### [obj_entity_extend/enablecollisions.lua](./obj_entity_extend/enablecollisions.lua)
- See the `Purpose` comment line.
+#### [obj_entity_extend/enablecollisions](./obj_entity_extend/enablecollisions.lua)
+See the `Purpose` comment line.
 
-### [obj_entity_extend/setgravity-improved.lua](./obj_entity_extend/setgravity-improved.lua)
- See the first note within the file.
+#### [obj_entity_extend/setgravity-improved](./obj_entity_extend/setgravity-improved.lua)
+See the first note within the file.
