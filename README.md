@@ -53,6 +53,9 @@ gluafuncbudget.Queue( {
 ```
 </details>
 
+#### [lengthenedchatmsgs](./lengthenedchatmsgs.lua)
+Increases the maximum message length in the default chat.
+
 #### [net_tablethroughstring](./net_tablethroughstring.lua)
 See the heading within the file.
 
