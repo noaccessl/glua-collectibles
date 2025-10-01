@@ -5,7 +5,8 @@ Various GLua scripts/extensions of potential beneficial use.
 
 #### [dev_gluafuncbudget](./dev_gluafuncbudget.lua)
 A utility that serves to conveniently measure performance of functions.</br>
-<sub>Brief documentation can be found within the file.</sub>
+<sub>Brief documentation can be found within the file.</sub></br>
+<sub>The name is coined of an analogy with [Source's Showbudget](https://developer.valvesoftware.com/wiki/Showbudget)</sub>
 
 <details><summary>Demo</summary>
 
